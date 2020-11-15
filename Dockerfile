@@ -17,10 +17,5 @@ COPY ./koa.service /etc/systemd/system
 # 设置可执行权限
 RUN chmod 0777 /etc/systemd/system/koa.service
 
-# 重载配置文件
-RUN systemctl daemon-reload
-
 # 启动服务
 RUN systemctl start koa
-
-CMD ["/usr/sbin/init"]
