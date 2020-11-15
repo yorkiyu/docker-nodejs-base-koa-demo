@@ -24,4 +24,4 @@ RUN chmod +x  /etc/rc.d/init.d/koa-start.sh
 # 添加脚本到开机自动启动项目中
 RUN cd /etc/rc.d/init.d \
     chkconfig --add koa-start.sh \
-    chkconfig autostart.sh on
+    chkconfig koa-start.sh on

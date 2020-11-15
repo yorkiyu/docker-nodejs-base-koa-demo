@@ -1,0 +1,23 @@
+{
+  "name": "docker-nodejs-base-koa-demo",
+  "version": "1.0.0",
+  "description": "基于 yorkyucn/docker-nodejs-base-image 镜像，构建 koa 应用的镜像 demo",
+  "main": "app.js",
+  "dependencies": {
+    "koa": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yorkiyu/docker-nodejs-base-koa-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yorkiyu/docker-nodejs-base-koa-demo/issues"
+  },
+  "homepage": "https://github.com/yorkiyu/docker-nodejs-base-koa-demo#readme"
+}
