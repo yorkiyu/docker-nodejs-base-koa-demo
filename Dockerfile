@@ -18,4 +18,4 @@ COPY ./koa.service /etc/systemd/system
 RUN chmod 0777 /etc/systemd/system/koa.service
 
 # 启动服务
-RUN systemctl start koa
+RUN systemctl enable koa.service 
