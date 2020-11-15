@@ -17,4 +17,6 @@ RUN chmod +x /etc/rc.d/rc.local
 RUN chmod +x /data/release/docker-nodejs-base-koa-demo/koa-start.sh
 
 # 添加脚本到开机自动启动项目中
-RUN echo "/data/release/docker-nodejs-base-koa-demo/koa-start.sh" >> /etc/rc.d/rc.local 
+RUN echo "/data/release/docker-nodejs-base-koa-demo/koa-start.sh" >> /etc/rc.d/rc.local
+
+CMD ["/usr/sbin/init"]
