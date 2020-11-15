@@ -21,4 +21,6 @@ RUN chmod 0777 /etc/systemd/system/koa.service
 RUN systemctl daemon-reload
 
 # 启动服务
-RUN systemctl start koa 
+RUN systemctl start koa
+
+CMD ["/usr/sbin/init"]
