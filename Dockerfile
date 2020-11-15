@@ -11,10 +11,6 @@ RUN mkdir -p /data/release/docker-nodejs-base-koa-demo
 # 复制源码
 COPY . /data/release/docker-nodejs-base-koa-demo
 
-# 安装依赖
-RUN cd /data/release/docker-nodejs-base-koa-demo \
-    npm i
-
 # 添加开机启动 koa 应用的脚本 
 COPY ./koa-start.sh /etc/rc.d/init.d
 
