@@ -11,12 +11,14 @@ RUN mkdir -p /data/release/docker-nodejs-base-koa-demo
 # 复制源码
 COPY . /data/release/docker-nodejs-base-koa-demo
 
-# 设置脚本可执行权限
-RUN chmod +x /etc/rc.d/rc.local
+# service
+COPY ./koa.service /etc/systemd/system
 
-RUN chmod +x /data/release/docker-nodejs-base-koa-demo/koa-start.sh
+# 设置可执行权限
+RUN chmod 0777 /etc/systemd/system/koa.service
 
-# 添加脚本到开机自动启动项目中
-RUN echo "/data/release/docker-nodejs-base-koa-demo/koa-start.sh" >> /etc/rc.d/rc.local
+# 重载配置文件
+RUN systemctl daemon-reload
 
-CMD ["/usr/sbin/init"]
+# 启动服务
+RUN systemctl start koa 
