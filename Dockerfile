@@ -16,3 +16,6 @@ COPY ./koa.service /etc/systemd/system
 
 # 设置可执行权限
 RUN chmod +x /etc/systemd/system/koa.service
+
+# 设置开机启动
+RUN ln -s /etc/systemd/system/koa.service /etc/systemd/system/multi-user.target.wants
