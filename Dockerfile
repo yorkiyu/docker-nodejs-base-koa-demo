@@ -15,5 +15,4 @@ COPY . /data/release/docker-nodejs-base-koa-demo
 COPY ./koa.service /etc/systemd/system
 
 # 设置可执行权限
-RUN chmod +x /data/release/docker-nodejs-base-koa-demo/koa-start.sh 
 RUN chmod +x /etc/systemd/system/koa.service
