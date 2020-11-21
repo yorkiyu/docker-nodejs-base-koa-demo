@@ -1,12 +1,12 @@
 [Unit]
-Description=pm2 start docker-nodejs-base-koa-demo 
+Description=pm2 start docker-nodejs-base-koa-demo
 After=network.target
 
 [Service]
 Type=simple
 ExecStart=/usr/local/services/node-v12.19.0-linux-x64/bin/pm2-runtime start /data/release/docker-nodejs-base-koa-demo/ecosystem.config.js --only docker-nodejs-base-koa-demo --env production
 ExecReload=
-ExecStop=/usr/local/services/node-v12.19.0-linux-x64/bin/pm2-runtime stop
+ExecStop=
 Environment="PATH=/usr/local/services/node-v12.19.0-linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 User=root
 Group=root

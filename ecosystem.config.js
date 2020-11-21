@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
-    name: "app",
-    script: "./app.js",
+    name: "docker-nodejs-base-koa-demo",
+    script: "/data/release/docker-nodejs-base-koa-demo/app.js",
     instances: 2,
     env: {
       NODE_ENV: "development",
