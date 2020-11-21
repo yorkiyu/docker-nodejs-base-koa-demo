@@ -1,6 +1,6 @@
 [Unit]
 Description=pm2 start docker-nodejs-base-koa-demo
-After=paths.target
+After=sysinit.target
 
 [Service]
 Type=simple
