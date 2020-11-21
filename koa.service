@@ -2,12 +2,11 @@
 Description=node docker-nodejs-base-koa-demo server
 
 [Service]
-ExecStart=/usr/local/services/node-v12.19.0-linux-x64/bin/node /data/release/docker-nodejs-base-koa-demo/app.js
+Type=forking
+ExecStart=/data/release/docker-nodejs-base-koa-demo/koa-start.sh
 Restart=always
 User=root
 Group=root
-Environment=PATH=/usr/bin:/usr/local/bin
-Environment=NODE_ENV=production
 WorkingDirectory=[/data/release/docker-nodejs-base-koa-demo]
 
 [Install]
