@@ -1,16 +1,29 @@
+# 服务说明
 [Unit]
+# 服务描述
 Description=pm2 start docker-nodejs-base-koa-demo
+# 前置需要启动的服务
 After=sysinit.target
 
+# 服务的一些具体运行参数的设置
 [Service]
+# 服务类型
 Type=simple
+# 服务启动
 ExecStart=/usr/local/services/node-v12.19.0-linux-x64/bin/pm2-runtime start /data/release/docker-nodejs-base-koa-demo/ecosystem.config.js --only docker-nodejs-base-koa-demo --env production
+# 服务重启
 ExecReload=
+# 服务停止
 ExecStop=
+# 设置预加载变量
 Environment="PATH=/usr/local/services/node-v12.19.0-linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# 执行用户
 User=root
+# 执行用户组
 Group=root
 WorkingDirectory=/data/release/docker-nodejs-base-koa-demo
 
+# 区块
 [Install]
+# 表示该服务所在的 Target
 WantedBy=multi-user.targe
